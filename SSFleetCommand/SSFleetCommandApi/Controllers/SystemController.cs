@@ -13,25 +13,7 @@ namespace SSFleetCommandApi.Controllers
         [HttpGet]
         public IEnumerable<DraftStarSystem> Get()
         {
-            return new List<DraftStarSystem>()
-                {
-                    new DraftStarSystem()
-                    {
-                        Id = 717782925,
-                        Name = "Wilenia",
-                        Level = 28,
-                        Neutral = true,
-                        Faction = FactionType.Klingon,
-                        HostileTypes = ShipType.Explorer | ShipType.Battleship | ShipType.Interceptor,
-                        HasBases = false,
-                        HasMissions = false,
-                        ResourceTypes = new List<ResourceType>()
-                        {
-                            new ResourceType() { Type = ElementType.Gas, Grade = ElementGrade.Three },
-                            new ResourceType() { Type = ElementType.Ore, Grade = ElementGrade.Three }
-                        }
-                    }
-                };
+            return new List<DraftStarSystem>();
         }
 
         // GET: api/System/5

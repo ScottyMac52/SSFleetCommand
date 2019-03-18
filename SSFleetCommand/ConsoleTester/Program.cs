@@ -12,7 +12,7 @@ namespace ConsoleTester
             DateTime startTime = DateTime.Now;
             var csvConverter = new CSVConverter<DraftStarSystem>()
             {
-                Path = @"D:\Downloads\SystemLog.csv",
+                Path = @"C:\Users\Scott\Source\Repos\SSFleetCommand\SSFleetCommand\SSFleetCommandApi\Data\SystemLog.csv",
                 SkipLines = 1,
                 TakeLines = 1
             };
