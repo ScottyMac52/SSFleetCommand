@@ -1,7 +1,10 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using SSFleetCommandModels.Enums;
 using SSFleetCommandModels.Models;
+using SSFleetCommandModels.Util;
+using System;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 
 namespace SSFleetCommandApi.Controllers
 {
@@ -11,9 +14,17 @@ namespace SSFleetCommandApi.Controllers
     {
         // GET: api/System
         [HttpGet]
-        public IEnumerable<DraftStarSystem> Get()
+        public async Task<IEnumerable<DraftStarSystem>> GetAsync()
         {
-            return new List<DraftStarSystem>();
+            var csvConverter = new CSVConverter<DraftStarSystem>()
+            {
+                Path = @"C:\Users\Scott\Source\Repos\SSFleetCommand\SSFleetCommand\SSFleetCommandApi\Data\SystemLog.csv",
+                SkipLines = 1,
+                TakeLines = 1
+            };
+
+            var result = await csvConverter.ExecuteAsync();
+            return csvConverter.Results;
         }
 
         // GET: api/System/5
