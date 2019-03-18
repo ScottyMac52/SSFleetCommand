@@ -1,0 +1,12 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/.vs
+/SSFleetCommand/.vs/SSFleetCommand/v15
+/SSFleetCommand/ConsoleTester/obj
+/SSFleetCommand/ConsoleTester/bin/Debug/netcoreapp2.2
+/SSFleetCommand/SSFleetCommandApi/bin/Debug/netcoreapp2.2
+/SSFleetCommand/SSFleetCommandApi/obj
+/SSFleetCommand/SSFleetCommandModels/bin/Debug/netcoreapp2.2
+/SSFleetCommand/SSFleetCommandModels/obj
